@@ -2,5 +2,5 @@
 
 <p>
     TODOParrot is the first tropically-themed TODO List
-    application to hit the market.
+    application to hit the market.!
 </p>
