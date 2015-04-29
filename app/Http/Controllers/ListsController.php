@@ -1,11 +1,11 @@
 <?php namespace todoparrot\Http\Controllers;
 
-use Illuminate\Routing\Controller;
+//use Illuminate\Routing\Controller;
 use todoparrot\Todolist;
 
-
+/*
 use Illuminate\Http\Request;
-
+*/
 class ListsController extends Controller
 {
 
@@ -16,6 +16,7 @@ class ListsController extends Controller
      */
     public function index()
     {
+        //return view('lists.index');
         $lists = Todolist::all();
         return view('lists.index')->with('lists', $lists);
     }
