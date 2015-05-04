@@ -18,8 +18,10 @@ class ListsController extends Controller
     public function index()
     {
         //return view('lists.index');
-        $lists = Todolist::all();
+        //$lists = Todolist::all();
         //var_dump($lists); die;
+        //return view('lists.index')->with('lists', $lists);
+        $lists = Todolist::orderBy('created_at', 'desc')->paginate(10);
         return view('lists.index')->with('lists', $lists);
     }
 

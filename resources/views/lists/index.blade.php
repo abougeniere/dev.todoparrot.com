@@ -16,4 +16,6 @@
         </p>
     @endif
 
+    {!! $lists->render() !!}
+
 @endsection
