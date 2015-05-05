@@ -1,9 +1,21 @@
 <?php namespace todoparrot;
 
+// slug
+use Cviebrock\EloquentSluggable\SluggableInterface;
+use Cviebrock\EloquentSluggable\SluggableTrait;
+
 use Illuminate\Database\Eloquent\Model;
 
-class Todolist extends Model
+class Todolist extends Model implements SluggableInterface
 {
+
+    use SluggableTrait;
+
+    protected $sluggable = array(
+        'build_from' => 'name',
+        'save_to' => 'slug',
+    );
+
 
     protected $fillable = ['name', 'description'];
 
