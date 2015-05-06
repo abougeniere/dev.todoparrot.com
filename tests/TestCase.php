@@ -3,11 +3,20 @@
 class TestCase extends Illuminate\Foundation\Testing\TestCase
 {
 
-    /**
-     * Creates the application.
-     *
-     * @return \Illuminate\Foundation\Application
-     */
+    public function setUp()
+    {
+        parent::setUp();
+        Artisan::call('migrate');
+
+    }
+
+    public function tearDown()
+    {
+        parent::setUp();
+        Artisan::call('migrate:reset');
+
+    }
+
     public function createApplication()
     {
         $app = require __DIR__ . '/../bootstrap/app.php';
