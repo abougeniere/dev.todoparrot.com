@@ -32,7 +32,12 @@ class Todolist extends Model implements SluggableInterface
         if ($v->passes()) return true;
         $this->errors = $v->messages();
         return false;
+    }
 
+
+    public function tasks()
+    {
+        return $this->hasMany('todoparrot\Task');
     }
 
 }
