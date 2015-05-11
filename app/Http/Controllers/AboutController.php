@@ -5,8 +5,16 @@ use todoparrot\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-class AboutController extends Controller {
+class AboutController extends Controller
+{
 
-	//
+    public function create()
+    {
+        return view('about.contact');
+    }
+
+    public function store()
+    {
+    }
 
 }
