@@ -137,6 +137,7 @@ return [
         'Illuminate\View\ViewServiceProvider',
         'Barryvdh\Debugbar\ServiceProvider',
         'Cviebrock\EloquentSluggable\SluggableServiceProvider',
+        'Collective\Html\HtmlServiceProvider',
 
         /*
          * Application Service Providers...
@@ -196,6 +197,7 @@ return [
         'View' => 'Illuminate\Support\Facades\View',
         'Debugbar' => 'Barryvdh\Debugbar\Facade',
         'Form' => 'Collective\Html\FormFacade',
+        'HTML' => 'Collective\Html\HtmlFacade',
 
     ],
 
